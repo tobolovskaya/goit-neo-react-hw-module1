@@ -1,30 +1,19 @@
 
 import Profile from './components/Profile/Profile';
+import userData from './userData.json';
 
-function App() {
-  const user = {
-    name: 'Jacques Gluke',
-    tag: 'jgluke',
-    location: 'Ocho Rios, Jamaica',
-    image: 'https://cdn-icons-png.flaticon.com/512/1077/1077012.png',
-    stats: {
-      followers: 5603,
-      views: 4827,
-      likes: 1308,
-    },
-  };
-
+const App = () => {
   return (
-    <div>
+    <>
       <Profile
-        name={user.name}
-        tag={user.tag}
-        location={user.location}
-        image={user.image}
-        stats={user.stats}
+        name={userData.username}
+        tag={userData.tag}
+        location={userData.location}
+        image={userData.avatar}
+        stats={userData.stats}
       />
-    </div>
+    </>
   );
-}
+};
 
 export default App;
